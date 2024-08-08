@@ -1,29 +1,19 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_rock_scissors_paper/widget/game_body.dart';
 
 void main() {
   runApp(MaterialApp(
-      title: 'Rock Scissors Papar',
-      theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-        useMaterial3: true,
+    title: 'Rock Scissors Papar',
+    theme: ThemeData(
+      colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+      useMaterial3: true,
+    ),
+    home: Scaffold(
+      appBar: AppBar(
+        title: const Text('Rock, Scissors, Paper'),
       ),
-      home: Body(),
-    )
+      body: const GameBody(),
+    ),
+  )
   );
 }
-
-class Body extends StatelessWidget {
-  const Body({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return Column(
-      children: [
-        Expanded(child: Placeholder()),
-        Expanded(child: Placeholder()),
-        Expanded(child: Placeholder()),
-      ],
-    );
-  }
-}
-
